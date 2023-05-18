@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        nav{
+        margin-bottom: 20px;
+        
+        background-color: rgb(43, 42, 42);
+        color: #FFFF;
+        }
+
+        #bloco{ 
+          margin-top: 20px;
+          margin-left: 10%;
+        }
+
+        #bloco p{
+          justify-content: center;
+        }
+
+        h1{
+          text-align: center;
+          color: #FFFF;
+        }
+
+        #atual{
+          color: #FFFF;
+        }
+
+        a{
+          color: rgb(75, 74, 74);
+        }
+
+        a:hover{
+          background-color: rgb(75, 74, 74);
+        }
+
+        .links a:hover{
+          background-color: #FFFF;
+        }
+
+        .links{
+          display: inline;
+          color: blue;
+          font-weight: bold;
+        }
+
+
+    </style>
+
+    <title>Pagina principal</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a id="home" class="navbar-brand" href="index.html"><h1>Desafio</h1> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" id="atual" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="contato.html">Contatos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="produto.html" >Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="catalogo.html" >Catalogos</a>
+              </li>
+            </ul> 
+          </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div id="bloco">
+        <h4>Servidor Local com direcionamento de rotas feito em <strong> NodeJS</strong> </h4>
+        <br>
+        <h5>Integrantes</h5>
+        <ul>
+            <li>Gabriel Vianna - RGM 29604745</li>
+            <li>Jose Ronaldo Azevedo Júnior - RGM 29685729</li>
+            <li>Douglas Zucolotto - RGM 29708672</li>
+        </ul>
+        <br>
+        <h4>Escopo do Desafio </h4>
+        <p>
+            O grupo deve desenvolver um sistema completo em node.js no qual contenha dois diretórios: <br>
+            <strong> 
+                ./recursos <br>
+                ./views <br>
+            </strong>
+            - O usuário <strong>(cliente do servidor)</strong> deve adicionar todo o projeto de website (formato .html, etc) no diretório
+            <strong>“./views”</strong> e arquivos no diretório <strong>“./recursos”</strong> . <br> A fim de teste, vão conter seis tipos de arquivos com nome e
+            extensão: 
+                <p>
+                    arquivo.docx, arquivo.jpeg, arquivo.mp3, arquivo.mp4, arquivo.json e arquivo.md <br>
+                    dentro do diretório <strong>“./recursos”</strong><br>
+                </p> 
+            
+            - O sistema de back-end deve direcionar a abertura dos arquivos via navegador através dos caminhos (rotas)
+            de serviço: <br><br>
+            <ul>
+              <li><div class="links"><a href="http://localhost:3000/abertura/tipoDocx">http://localhost:3000/abertura/tipoDocx</a> </div> Abrir arquivo arquivo.docx </li>
+              <li><div class="links"><a href="http://localhost:3000/abertura/tipoJpeg">http://localhost:3000/abertura/tipoJpeg</a></div> Abrir arquivo arquivo.jpeg </li>
+              <li><div class="links"><a href="http://localhost:3000/abertura/tipoMp3">http://localhost:3000/abertura/tipoMp3</a></div> Abrir arquivo arquivo.mp3 </li>
+              <li><div class="links"><a href="http://localhost:3000/abertura/tipoMp4">http://localhost:3000/abertura/tipoMp4</a></div> Abrir arquivo arquivo.mp4 </li>
+              <li><div class="links"><a href="http://localhost:3000/abertura/tipoJson">http://localhost:3000/abertura/tipoJson</a></div> Abrir arquivo arquivo.json</li>
+              <li><div class="links"><a href="http://localhost:3000/abertura/tipoMd">http://localhost:3000/abertura/tipoMd</a></div> Abrir arquivo arquivo.md </li>
+              <li><div class="links"><a href="http://localhost:3000/abertura/tipoPdf">http://localhost:3000/abertura/tipoPdf</a></div> Abrir arquivo arquivo.pdf </li>
+            </ul>          
+          
+            - Caso não encontre o caminho digitado, o sistema deve enviar um site chamado “404.html” com informações
+            que o caminho não foi encontrado. <br>
+            - Conforme o usuário entrar nos caminhos GET via URL (descritos abaixo) o sistema deve abrir os seguintes
+            sites (arquivos html): <br><br>
+
+            <ul>
+              <li><div class="links"><a href="http://localhost:3000/"> http://localhost:3000/</a> </div> Abrir site index.html</li>
+              <li><div class="links"><a href="http://localhost:3000/contato">http://localhost:3000/contato</a> </div>Abrir site contato.html</li>
+              <li><div class="links"><a href="http://localhost:3000/produto">http://localhost:3000/produto</a> </div>Abrir site produto.html</li>
+              <li><div class="links"><a href="http://localhost:3000/catalogo">http://localhost:3000/catalogo</a> </div>Abrir site catalogo.html</li>
+              
+
+            </ul>
+             
+            - Cada grupo deve montar os arquivos htmls, rotas e logica mencionada. <br>
+            - No arquivo index.html o grupo deve descrever o projeto e apresentar o grupo.
+            - Entrega deve ser via github, submetendo futuramente no Black Board (em data a ser anunciada pelo
+            professor).
+            <br> - Para validação, o professor ao abaixar o código, vai inserir alguns arquivos (conforme enunciado) para validar
+            / testar o sistema, com exceção dos views.
+        </p>
+
+    </div>
+    <br><br>
+    
+    
+</body>
+</html>
